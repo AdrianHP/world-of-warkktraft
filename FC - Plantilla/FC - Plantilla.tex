@@ -1,0 +1,272 @@
+%===================================================================================
+% FESTIVAL DE LA CLASE - MATCOM, UH
+%===================================================================================
+% Esta plantilla ha sido diseñada para ser usada en los artículos del Festival de 
+% la Clase de MatCom.
+%
+% Por favor, siga las instrucciones de esta plantilla y rellene en las secciones
+% correspondientes.
+%
+% NOTA: Necesitará el archivo 'fc_jcematcom.sty' en la misma carpeta donde esté este
+%       archivo para poder utilizar esta plantila.
+%===================================================================================
+
+
+
+%===================================================================================
+% PREÁMBULO
+%-----------------------------------------------------------------------------------
+\documentclass[a4paper,10pt,twocolumn]{article}
+
+%===================================================================================
+% Paquetes
+%-----------------------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fc_jcematcom}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[pdftex]{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+%-----------------------------------------------------------------------------------
+% Configuración
+%-----------------------------------------------------------------------------------
+\hypersetup{colorlinks,%
+	    citecolor=black,%
+	    filecolor=black,%
+	    linkcolor=black,%
+	    urlcolor=blue}
+%-----------------------------------------------------------------------------------
+% Teoremas y definiciones
+%-----------------------------------------------------------------------------------
+\theoremstyle{theorem}
+\newtheorem{thm}{Teorema}[section]
+\theoremstyle{definition}
+\newtheorem{cor}[thm]{Corolario}
+\newtheorem{lem}[thm]{Lema}
+\newtheorem{prop}[thm]{Proposición}
+\newtheorem{defn}[thm]{Definición}
+\newtheorem{ejem}[thm]{Ejemplo}
+\newtheorem{ejer}[thm]{Ejercicio}
+\theoremstyle{remark}
+\newtheorem{obs}[thm]{Observación}
+%===================================================================================
+
+
+
+%===================================================================================
+% Presentacion
+%-----------------------------------------------------------------------------------
+% Título
+%-----------------------------------------------------------------------------------
+\title{Tema de la clase\\
+\vspace{2ex}
+\begin{large}
+Asignatura\\
+Lic. en (...)
+\end{large}}
+
+%-----------------------------------------------------------------------------------
+% Autores
+%-----------------------------------------------------------------------------------
+\author{\\
+\name Autor \email \href{mailto:a.uno@lab.matcom.uh.cu}{autor@lab.matcom.uh.cu}
+	\\ \addr Grupo B612}
+
+%-----------------------------------------------------------------------------------
+% Tutores
+%-----------------------------------------------------------------------------------
+\tutors{\\
+Dr. Tutor Uno, \emph{Centro} \\
+Lic. Tutor Dos, \emph{Centro}}
+
+%-----------------------------------------------------------------------------------
+% Headings
+%-----------------------------------------------------------------------------------
+\jcematcomheading{\the\year}{1-\pageref{end}}{Nombre del autor}
+
+%-----------------------------------------------------------------------------------
+\ShortHeadings{Tema de la clase}{Nombre del autor}
+%===================================================================================
+
+
+
+%===================================================================================
+% DOCUMENTO
+%-----------------------------------------------------------------------------------
+\begin{document}
+
+%-----------------------------------------------------------------------------------
+% NO BORRAR ESTA LINEA!
+%-----------------------------------------------------------------------------------
+\twocolumn[
+%-----------------------------------------------------------------------------------
+
+\maketitle
+
+%===================================================================================
+% Lenguaje
+%-----------------------------------------------------------------------------------
+\selectlanguage{spanish} % Para producir el documento en Español
+\vspace{0.5cm}
+]
+
+%===================================================================================
+% Objetivos
+%-----------------------------------------------------------------------------------
+\section{Objetivos}
+%-----------------------------------------------------------------------------------
+\begin{enumerate}
+	\item Esta sección va dedicada a los objetivos de la clase, las metas para el encuentro y ciertas especificidades que considere de importancia resaltar durante el trancurso de la clase.
+	\item Según la temática se puede hacer alusión a los medios de enseñanza utilizados.
+\end{enumerate}
+
+
+%===================================================================================
+% Introducción
+%-----------------------------------------------------------------------------------
+\section{Introducción}\label{sec:intro}
+%-----------------------------------------------------------------------------------
+(Este segmento tiene una duración de $x$ minutos.)\\
+
+\textbf{¿Cómo introducir mi clase?}
+		\begin{itemize}
+			\item Recursos para motivar la clase.
+			\item Recuento por los antecedentes de los resultados o investigadores.
+			\item La introducción puede tener cualquier formato que se desee, no es necesario que se acompañe por plecas.
+		\end{itemize}
+
+
+%===================================================================================
+% Desarrollo
+%-----------------------------------------------------------------------------------
+\section{Teorizando un poco}\label{sec:teoria}
+%-----------------------------------------------------------------------------------
+(Este segmento tiene una duración de $y$ minutos.)\\
+
+Tras la introducción se podrán construir las secciones que se estimen convenientes para el desarrollo de la clase.
+
+\begin{thm}[Un Teorema interesante]
+	De esta forma puede enunciarse un resultado importante.
+\end{thm}  
+
+\begin{cor}
+	También es posible derivar resultados. Los entornos \{prop\}, \{obs\}, \{ejem\} y \{ejer\} permiten enunciar de forma similar las proposiciones, observaciones, ejemplos y ejercicios respectivamente. El uso de estos ambientes es opcional.
+\end{cor}
+
+\begin{ejem}[Un brillante algoritmo] 
+Para producir código fuente, envuélvalo en una figura flotante y etiquételo correctamente. Por ejemplo, en la Fig. \ref{fig:code} se muestra un código conocido.
+
+	% Configuración de Listings
+	\lstset{keywordstyle=\color{blue}, basicstyle=\small}
+
+	\begin{figure}[htb]%
+	\begin{lstlisting}[language=c]%
+
+    int main(int argc, char** argv)
+    {
+        // Imprimiendo "Hola Mundo".
+        printf("Hello, World");
+    }
+
+	\end{lstlisting}
+	\caption{Código fuente de ejemplo.\label{fig:code}}
+	\end{figure}
+\end{ejem}
+
+La cantidad de secciones y subsecciones en lo adelante y sus respectivos nombres quedan a elección del autor.
+
+%-----------------------------------------------------------------------------------
+	\subsection{Organización del documento}\label{sub:results}
+%-----------------------------------------------------------------------------------
+Para producir cuerpos flotantes (figuras o tablas), asegúrese de numerar y etiquetar correctamente cada figura. Las referencias a las figuras deben estar correctamente etiquetadas. Por ejemplo, véase la Fig. \ref{fig:code} o la Fig. \ref{fig:ex} dejada a continuación.
+	\begin{figure}[h!]%
+	\begin{center}
+		\begin{tabular}{|c|c|c|} \hline
+		 			& Método 1 	& Método 2 	\\ \hline
+		A 			&  			&  			\\ \hline
+		B			& 			& 			\\ \hline
+		C 			& 			&  			\\ \hline
+		\end{tabular}
+	\caption{Figura de ejemplo. Recuerde especificar el origen de los datos que se muestran.}\label{fig:ex}
+	\end{center}
+	\end{figure}
+ 	
+Pueden insertarse de esta manera también gráficos y otros archivos.	
+
+%===================================================================================
+% Ejercicios resueltos
+%-----------------------------------------------------------------------------------
+\section{Ejercicio 1}\label{sec:ejer_1}
+%-----------------------------------------------------------------------------------
+(Este segmento tiene una duración de $z_1$ minutos.)\\
+
+Compartir las soluciones de ciertos ejercicios así como observaciones interesantes sobre ellas que puedan servir de guía para el desarrollo de la clase.
+
+
+%-----------------------------------------------------------------------------------
+\section{Ejercicio 2}\label{sec:ejer_2}
+%-----------------------------------------------------------------------------------
+(Este segmento tiene una duración de $z_2$ minutos.)\\
+
+Muchas veces la interacción con los estudiantes puede ser de importancia. De este modo métodos variados de solución pueden aportar al enriquecimiento de la clase.\\
+
+\textbf{Receso} (5 minutos)
+
+
+%===================================================================================
+% Conclusiones
+%-----------------------------------------------------------------------------------
+\section{Conclusiones} \label{sec:conc}
+%-----------------------------------------------------------------------------------
+
+(Este segmento tiene una duración de cierta cantidad minutos.)\\
+ 
+Se resumirán los resultados más destacados ejercitados en la actividad.
+
+Se puede hacer mención de aplicaciones del método estudiado, posibles investigaciones o repercusiones en la cotidianidad.
+
+
+%===================================================================================
+% Ejercicios Propuestos
+%-----------------------------------------------------------------------------------
+\section{Estudio independiente} \label{independ}
+%-----------------------------------------------------------------------------------
+
+Orientar y comentar los ejercicios propuestos que se deseen.
+
+\begin{ejer}
+	De creerlo conveniente puede asignarse tareas para el estudio independiente, o actividades de carácter evaluativo. 
+\end{ejer}
+
+\begin{ejer}
+	 La cantidad de activiades será a conveniencia aunque podría ser de ayuda su justificar de manera coherente el volumen de trabajo.
+\end{ejer}
+
+El esquema de clase es variable y queda sujeto a la voluntad del participante, solo debe ajustarse a los requisitos de la convocatoria oficial.
+
+
+%===================================================================================
+% Bibliografía
+%-----------------------------------------------------------------------------------
+\begin{thebibliography}{99}
+%-----------------------------------------------------------------------------------
+	\bibitem{knuth} Donald E. Knuth. \emph{The Art of Computer Programming}.
+		Volume 1: Fundamental Algorithms (3rd~edition), 1997.
+		Addison-Wesley Professional.
+
+	\bibitem{wiki} Wikipedia. URL: \href{http://en.wikipedia.org}
+	  {http://en.wikipedia.org}.
+		Consultado en \today.
+		
+\end{thebibliography}
+%-----------------------------------------------------------------------------------
+
+\label{end}
+
+\end{document}
+
+%===================================================================================
